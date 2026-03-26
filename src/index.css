@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #a04100;
+  --color-primary-container: #ff6b00;
+  --color-surface: #fcf9f4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3ee;
+  --color-surface-container: #f0ede8;
+  --color-surface-container-high: #ebe8e3;
+  --color-surface-container-highest: #e5e2dd;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #5a4136;
+  --color-outline-variant: #e2bfb0;
+  --color-tertiary: #0062a1;
+  --color-tertiary-container: #059eff;
+  --color-secondary: #96481e;
+  --color-secondary-container: #fe9a69;
+
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Be Vietnam Pro", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --animate-shimmer: shimmer 1.5s infinite;
+  --animate-shimmer-border: shimmer-border 3s ease infinite;
+  --animate-shimmer-slide: shimmer-slide 1.5s ease-in-out;
+
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+  @keyframes shimmer-border {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes shimmer-slide {
+    100% { transform: translateX(200%); }
+  }
+}
+
+@layer utilities {
+  .editorial-gradient {
+    background: radial-gradient(circle at 70% 30%, rgba(255, 107, 0, 0.08) 0%, rgba(252, 249, 244, 0) 60%),
+                radial-gradient(circle at 10% 80%, rgba(160, 65, 0, 0.05) 0%, rgba(252, 249, 244, 0) 50%);
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+  }
+  .editorial-shadow {
+    box-shadow: 0 12px 40px rgba(28, 28, 25, 0.06);
+  }
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #a04100 0%, #ff6b00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
