@@ -131,44 +131,39 @@ export default function ExperienceLayer() {
           viewport={{ once: true }}
           whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)" }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="group relative bg-surface-container-high p-8 rounded-3xl flex flex-col justify-between min-h-[480px] cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
+          className="group relative p-8 rounded-3xl flex flex-col justify-between min-h-[480px] cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
         >
-          {/* Subtle Glow Background */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-6">
-              <ShoppingBag className="text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
-              <span className="font-headline font-bold text-lg group-hover:text-primary transition-colors duration-300">Shopping with better instinct</span>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div
-                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg relative opacity-80 scale-95 -rotate-2 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-0 transition-all duration-500"
-              >
-                {/* Image overlay glow */}
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 mix-blend-overlay transition-opacity duration-500 z-10 pointer-events-none"></div>
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDavtUvPdqSlyTpXrwEu23SJX9PzBGoyQpJe5Uhwie30ZXKJRSOusHrtamdqMcPQVasMP6WOa4fZozuqeefumvUHsT3hc_6ayH2WRd_dMCOtY_PbVxHrVNHRCWU16S-oYCRYcE6ySImqnm4eKz3C8Dqe03QOPhvIh1vU_OgqMJ_04d2hrwtnBTt1-Vh2IR3v81AM0zwrVWnzcT7cpiKzYTQPfiJwLaIi2NPCQE186YoOIqSyg8AnrY8Ifp_BOMNy3EadOcyllo3je4"
-                  alt="Shopping"
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="flex flex-col justify-end pb-4">
-                <div
-                  className="bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/15 relative overflow-hidden opacity-80 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
-                >
-                  {/* Shimmer effect on hover */}
-                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/5 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
-
-                  <span className="text-[10px] text-primary font-bold uppercase block mb-1 font-label">Taste Discovery</span>
-                  <p className="text-xs text-on-surface font-medium italic font-body">"Matches your bookmarks on brutalist pottery."</p>
-                </div>
-              </div>
-            </div>
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <img 
+              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774587732/pots_in_grey_bg_720_u9ksvx.jpg" 
+              alt="Shopping background" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/60 transition-opacity duration-500 group-hover:opacity-80"></div>
           </div>
-          <div className="mt-8 relative z-10">
-            <p className="font-body text-on-surface-variant text-sm leading-relaxed max-w-[200px] group-hover:text-on-surface transition-colors duration-300">We find objects that belong in your home, not just in your cart.</p>
+
+          <div className="relative z-10 flex flex-col h-full justify-between">
+            <div>
+              <div className="flex items-center gap-2 mb-4 drop-shadow-lg">
+                <ShoppingBag className="text-white group-hover:scale-110 transition-transform duration-300" size={24} />
+                <span className="font-headline font-bold text-lg text-white transition-colors duration-300">Shopping with better instinct</span>
+              </div>
+              <p className="font-body text-white/80 text-sm leading-relaxed max-w-[240px] drop-shadow-md">We find objects that belong in your home, not just in your cart.</p>
+            </div>
+
+            <div className="w-full">
+              <div
+                className="bg-black/40 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl shadow-2xl max-w-[280px] mt-4 relative overflow-hidden opacity-90 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
+              >
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+
+                <span className="text-[9px] text-white/90 font-bold uppercase tracking-widest block mb-1 font-label">Taste Discovery</span>
+                <p className="text-sm text-white/95 font-medium italic font-body leading-relaxed">"Matches your bookmarks on brutalist pottery."</p>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -179,37 +174,45 @@ export default function ExperienceLayer() {
           viewport={{ once: true }}
           whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)" }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="group relative bg-surface-container-lowest p-8 rounded-3xl flex flex-col justify-center min-h-[480px] editorial-shadow mt-8 lg:mt-8 border border-surface-container-high hover:border-primary/20 cursor-pointer overflow-hidden transition-colors duration-500"
+          className="group relative p-8 rounded-3xl flex flex-col min-h-[480px] lg:mt-12 cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
         >
-          {/* Subtle Glow Background */}
-          <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-
-          <div className="absolute top-8 left-8 z-10">
-            <div className="flex items-center gap-2">
-              <Compass className="text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
-              <span className="font-headline font-bold text-lg group-hover:text-primary transition-colors duration-300">Travel itineraries you’d actually follow</span>
-            </div>
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <img 
+              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774587896/cabin_in_the_woods_720_mihnqd.jpg" 
+              alt="Travel background" 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/60 transition-opacity duration-500 group-hover:opacity-80"></div>
           </div>
-          <div className="text-center px-4 space-y-6 mt-12 relative z-10">
-            <div className="relative inline-block">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrDnspMhB3IF_vXruww_1IVTN9x4MjDFa-TCyTcrNqaZ7qv48I3WyVTo6ZXuvbPdxd0CIpRiGeQQvzmQereEuMg0PdgxqObCZ0cKa4_0TphqXHpCM6ndvSiULUR1CfSNDTcegPeDUm29dtRjxrS3AZwW-uwUCzhUM6ASLhxywn3vlYIzCeNRhNBW2bOG76PcYo5Uo99HSH3VvIbA8XNfx9fKilKgzI3go1xD_ge5NUh2kQbaZNDe-auqzI_n1VMySccis46QB9Crg"
-                alt="Travel"
-                className="w-64 h-64 rounded-full object-cover mx-auto ring-8 ring-surface-container-low group-hover:ring-primary/30 transition-all duration-700 opacity-80 scale-95 group-hover:opacity-100 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <div
-                className="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-2xl shadow-xl max-w-[140px] text-left overflow-hidden opacity-80 translate-y-4 scale-95 group-hover:opacity-100 group-hover:-translate-y-2 group-hover:-rotate-3 group-hover:scale-110 transition-all duration-500"
-              >
-                {/* Shimmer effect on hover */}
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
 
-                <span className="text-[10px] font-bold uppercase tracking-tighter block mb-1 font-label">Optimal Weekend</span>
-                <p className="text-xs font-bold leading-tight font-headline">Misty Pines Retreat</p>
-                <p className="text-[10px] opacity-80 mt-1 font-body">2.5h drive away</p>
+          <div className="flex items-center gap-2 mb-4 relative z-10 drop-shadow-lg">
+            <Compass className="text-white group-hover:scale-110 transition-transform duration-300" size={24} />
+            <span className="font-headline font-bold text-lg text-white transition-colors duration-300">Travel itineraries you’d actually follow</span>
+          </div>
+          
+          <div className="relative z-10 drop-shadow-md">
+            <p className="font-body text-white/80 text-sm leading-relaxed max-w-[240px]">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
+          </div>
+
+          <div className="mt-auto space-y-4 relative z-10 w-full flex justify-end">
+            <div
+              className="bg-black/40 backdrop-blur-2xl border border-white/20 text-white p-5 rounded-3xl shadow-2xl max-w-[260px] text-left relative overflow-hidden opacity-90 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+            >
+              {/* Shimmer effect on hover */}
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+
+              <div className="flex justify-between items-center mb-3">
+                <span className="text-[9px] font-bold uppercase tracking-widest block font-label text-white/80">Optimal Weekend</span>
+                <Sparkles className="text-primary group-hover:animate-pulse" size={16} />
+              </div>
+              <p className="text-lg font-bold leading-tight font-headline text-white mb-3">Misty Pines Retreat</p>
+              <div className="flex items-center gap-2 border-t border-white/10 pt-3">
+                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(243,112,33,0.8)]"></div>
+                 <p className="text-[11px] text-white/90 font-medium font-body">2.5h drive away</p>
               </div>
             </div>
-            <p className="text-on-surface-variant font-light text-lg font-body group-hover:text-on-surface transition-colors duration-300">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
           </div>
         </motion.div>
       </div>
