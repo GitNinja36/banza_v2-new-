@@ -11,7 +11,7 @@ export default function WhyDifferent() {
           viewport={{ once: true }}
           className="font-label font-bold text-primary uppercase tracking-[0.2em] text-[10px] mb-6 block"
         >
-          The Architecture of You
+          The Architecture of Your AI Twin
         </motion.span>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function WhyDifferent() {
               <BrainCircuit size={24} strokeWidth={1.5} />
             </div>
             <h3 className="font-headline font-bold text-2xl mb-3 text-on-surface">Understands Nuance</h3>
-            <p className="font-body text-on-surface-variant text-base leading-relaxed max-w-[280px]">Banza knows the difference between your 'focus' jazz and your 'dinner party' jazz. It grasps context, not just keywords.</p>
+            <p className="font-body text-on-surface-variant text-base leading-relaxed max-w-[280px]">Banza’s AI Twin understands the difference between your ‘focus’ jazz and your ‘dinner party’ jazz. It grasps your context, not just the keywords.</p>
           </div>
           
           {/* Abstract Visual */}

@@ -19,11 +19,11 @@ export default function Trust() {
                 Protected Intelligence
               </span>
               <h2 className="font-headline text-5xl md:text-7xl font-bold tracking-tight text-on-surface leading-[1.05] mb-6">
-                Secured by design.<br />
+                Secured from the ground up.<br />
                 <span className="text-primary">Controlled by you.</span>
               </h2>
               <p className="text-lg md:text-xl text-on-surface-variant font-light leading-relaxed font-body max-w-md">
-                Personalization without invasion. Your connections and preferences remain entirely under your control, with privacy engineered from day one.
+                Personalization without invasion. Your preferences remain entirely yours, with privacy engineered in from the start.
               </p>
             </motion.div>
           </div>
@@ -111,8 +111,8 @@ export default function Trust() {
                 <Lock className="text-[#f37021]" size={20} />
               </motion.div>
             </div>
-            <h3 className="font-headline font-bold text-xl mb-3 text-[#1A1A1A]">Private by design</h3>
-            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Encrypted on-device storage. Only you hold the keys.</p>
+            <h3 className="font-headline font-bold text-xl mb-3 text-[#1A1A1A]">Private by default</h3>
+            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Encrypted on-device. Only you hold the keys.</p>
           </motion.div>
 
           {/* Card 2 */}
@@ -138,7 +138,7 @@ export default function Trust() {
               </div>
             </div>
             <h3 className="font-headline font-bold text-xl mb-3 text-[#1A1A1A]">You stay in control</h3>
-            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Granular toggles for every signal. Grant or revoke access instantly.</p>
+            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Granular toggles for every connection. Revoke access anytime.</p>
           </motion.div>
 
           {/* Card 3 */}
@@ -165,7 +165,7 @@ export default function Trust() {
               </div>
             </div>
             <h3 className="font-headline font-bold text-xl mb-3 text-[#1A1A1A]">Minimal exposure</h3>
-            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Differential privacy ensures we process insights without seeing your raw data.</p>
+            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">We generate insights without ever viewing your raw data.</p>
           </motion.div>
 
           {/* Card 4 */}
@@ -191,7 +191,7 @@ export default function Trust() {
               </div>
             </div>
             <h3 className="font-headline font-bold text-xl mb-3 text-[#1A1A1A]">Global Standards</h3>
-            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Built to exceed GDPR, CCPA, and emerging AI safety frameworks.</p>
+            <p className="font-body text-[#4A4A4A] text-sm leading-relaxed">Exceeding GDPR, CCPA, and the latest AI safety requirements</p>
           </motion.div>
         </div>
 

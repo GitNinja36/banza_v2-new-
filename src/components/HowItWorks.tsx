@@ -6,10 +6,10 @@ const steps = [
   {
     step: "01",
     title: "Connect your apps",
-    desc: "Securely link your favorite services—from Spotify to Netflix. Banza gathers the fragments of your taste to build a cohesive baseline.",
+    desc: "Securely link your favorite services from Spotify to Netflix. Banza gathers your taste to build a complete profile.",
     visual: (
       <div className="flex items-center gap-3 relative z-10">
-        <motion.div 
+        <motion.div
           animate={{ y: [-4, 4, -4] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center"
@@ -17,9 +17,9 @@ const steps = [
           <Music className="text-primary" size={24} />
         </motion.div>
         <div className="w-1 px-4 border-t-2 border-dashed border-outline-variant/30"></div>
-        <motion.div 
+        <motion.div
           animate={{ rotate: 360, scale: [1, 1.05, 1] }}
-          transition={{ 
+          transition={{
             rotate: { duration: 8, repeat: Infinity, ease: "linear" },
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
@@ -28,7 +28,7 @@ const steps = [
           <RefreshCw size={24} />
         </motion.div>
         <div className="w-1 px-4 border-t-2 border-dashed border-outline-variant/30"></div>
-        <motion.div 
+        <motion.div
           animate={{ y: [4, -4, 4] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center"
@@ -41,25 +41,25 @@ const steps = [
   {
     step: "02",
     title: "Train your Twin",
-    desc: "Refine your model with quick, editorial daily questions. Your Twin evolves with your changing moods, becoming more human with every interaction.",
+    desc: "Refine your AI Twin with short daily questionnaires. It evolves with your changing moods, becoming more like you with every interaction.",
     visual: (
       <div className="flex flex-col items-center justify-center w-full">
         <div className="flex flex-wrap gap-2 justify-center mb-4">
-          <motion.span 
+          <motion.span
             animate={{ y: [-2, 2, -2] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0 }}
             className="px-3 py-1 bg-white rounded-full text-[10px] font-bold shadow-sm border border-outline-variant/10"
           >
             Jazz Mornings
           </motion.span>
-          <motion.span 
+          <motion.span
             animate={{ y: [-2, 2, -2] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             className="px-3 py-1 bg-primary/10 text-primary rounded-full text-[10px] font-bold shadow-sm"
           >
             Sci-Fi Enthusiast
           </motion.span>
-          <motion.span 
+          <motion.span
             animate={{ y: [-2, 2, -2] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 2 }}
             className="px-3 py-1 bg-white rounded-full text-[10px] font-bold shadow-sm border border-outline-variant/10"
@@ -68,7 +68,7 @@ const steps = [
           </motion.span>
         </div>
         <div className="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
-          <motion.div 
+          <motion.div
             initial={{ width: "0%" }}
             whileInView={{ width: "68%" }}
             transition={{ duration: 1.5, ease: "easeOut" }}
@@ -83,7 +83,7 @@ const steps = [
   {
     step: "03",
     title: "Unlock experiences",
-    desc: "Experience proactive curation. From restaurant picks to music playlists, Banza suggests the perfect choice before you even have to think about it.",
+    desc: "Experience proactive curation of personal recommendations, from restaurants near you to music playlists. Your Twin suggests the perfect choice before you have to think about it.",
     visual: (
       <div className="bg-white p-4 rounded-xl shadow-xl w-full border border-outline-variant/5">
         <div className="flex items-center gap-3 mb-3">
@@ -96,11 +96,11 @@ const steps = [
           <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Tonight's Pick</span>
         </div>
         <div className="h-16 w-full rounded-lg mb-2 overflow-hidden">
-          <motion.img 
+          <motion.img
             animate={{ scale: [1, 1.05, 1] }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_EPQzlCxnVPES44ABsDUwmB3RhdoO4o2u4scVIKFcbXuLVXzZ8Lcx2-UKSLaiVOWAQ_GvfN-r5mwNBIUt079Gkl6qzNSUuAPy1BqQH6S_zHZZH5_jshZM6ffylVNMjAIJre7vUcLsb6EEAYHMLnEg6cET2rLvuHMnBDab5va7tM7xQnxqslMcS0TZ3CLpuEOMlGsGp3AtXEwuVKyP6S5wU_RJk7FNs6lTSwKdAO0Hq9mdxVwaX4lGnpn1QZcHtBYG14NvW5ZHRss" 
-            alt="Recommendation Preview" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_EPQzlCxnVPES44ABsDUwmB3RhdoO4o2u4scVIKFcbXuLVXzZ8Lcx2-UKSLaiVOWAQ_GvfN-r5mwNBIUt079Gkl6qzNSUuAPy1BqQH6S_zHZZH5_jshZM6ffylVNMjAIJre7vUcLsb6EEAYHMLnEg6cET2rLvuHMnBDab5va7tM7xQnxqslMcS0TZ3CLpuEOMlGsGp3AtXEwuVKyP6S5wU_RJk7FNs6lTSwKdAO0Hq9mdxVwaX4lGnpn1QZcHtBYG14NvW5ZHRss"
+            alt="Recommendation Preview"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
@@ -121,16 +121,16 @@ const steps = [
           { label: "Data Portability", active: false },
           { label: "Active Learning", active: true }
         ].map((toggle, i) => (
-          <motion.div 
-            key={i} 
+          <motion.div
+            key={i}
             whileHover={{ scale: 1.02 }}
             className="flex items-center justify-between p-2 bg-white rounded-lg shadow-sm"
           >
             <span className="text-[10px] font-medium">{toggle.label}</span>
             <div className={`w-8 h-4 rounded-full relative transition-colors ${toggle.active ? 'bg-primary' : 'bg-surface-container-highest'}`}>
-              <motion.div 
+              <motion.div
                 initial={false}
-                animate={{ 
+                animate={{
                   x: toggle.active ? 16 : 2,
                   scale: toggle.active ? [1, 1.2, 1] : 1
                 }}
@@ -161,38 +161,38 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" ref={containerRef} className="pt-32 pb-24 px-6 overflow-x-hidden bg-surface">
       <div className="max-w-4xl mx-auto text-center mb-24">
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="font-label font-bold tracking-wider uppercase text-xs text-primary mb-4 block"
         >
-          How Banza Works
+          How Banza's AI Twin Works
         </motion.span>
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
           className="text-5xl md:text-7xl font-headline font-extrabold tracking-tight text-on-background mb-8 leading-[1.1]"
         >
-          Your Twin comes to life in four steps
+          Your Twin comes to life in 4 steps
         </motion.h2>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
           className="text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-body"
         >
-          We’ve replaced complex algorithms with an intuitive curation process. Banza learns who you are across your digital life to create a proactive companion that truly gets you.
+          We’ve replaced tedious prompting with an intuitive training process. Your Banza AI Twin learns who you are across your digital life to create a proactive companion that understands you.
         </motion.p>
       </div>
 
       <div className="max-w-7xl mx-auto relative">
         {/* Connecting Line */}
         <div className="absolute top-1/2 left-0 w-full h-1 bg-outline-variant/10 -translate-y-1/2 hidden lg:block z-0 rounded-full">
-          <motion.div 
+          <motion.div
             className="h-full bg-primary rounded-full relative"
             style={{ width: lineWidth }}
           >
@@ -203,7 +203,7 @@ export default function HowItWorks() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
           {steps.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

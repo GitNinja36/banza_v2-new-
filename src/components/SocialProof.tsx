@@ -8,12 +8,12 @@ const testimonials = [
   },
   {
     quote: "I used to spend 20 minutes picking a movie. Now Banza just gives me two options based on my mood, and it's always right.",
-    author: "Marcus T.",
+    author: "Madhav T.",
     role: "Software Engineer"
   },
   {
     quote: "The privacy controls are what sold me. I love that I can see exactly what it's learning and turn off certain apps when I want.",
-    author: "Elena R.",
+    author: "Ekalavya M.",
     role: "Creative Director"
   },
   {
@@ -27,7 +27,7 @@ export default function SocialProof() {
   return (
     <section id="stories" className="py-32 px-6 bg-surface-container-lowest border-t border-outline-variant/10">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Editorial Header */}
         <div className="mb-24 md:mb-32 max-w-3xl">
           <motion.div
@@ -48,7 +48,7 @@ export default function SocialProof() {
         {/* Editorial Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-20 max-w-6xl mx-auto">
           {testimonials.map((testimonial, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -58,11 +58,11 @@ export default function SocialProof() {
             >
               {/* Subtle decorative line */}
               <div className="w-8 h-[1px] bg-primary/30 mb-8"></div>
-              
+
               <p className="font-serif text-2xl md:text-3xl text-on-surface leading-snug mb-8">
                 "{testimonial.quote}"
               </p>
-              
+
               <div className="mt-auto flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant font-headline font-bold text-sm">
                   {testimonial.author.charAt(0)}
@@ -77,7 +77,7 @@ export default function SocialProof() {
         </div>
 
         {/* Subtle Stats Footer */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

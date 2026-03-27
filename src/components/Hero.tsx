@@ -50,9 +50,6 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-4"
           >
-            <span className="inline-block font-label text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
-              Personal AI, built around you
-            </span>
             <h1 className="font-headline text-6xl lg:text-[6.5rem] font-bold leading-[0.95] tracking-tight text-on-surface">
               Build Your <br /> 
               <span className="text-primary italic font-serif font-normal">AI Twin</span>
@@ -72,7 +69,7 @@ export default function Hero() {
             {[
               { icon: Shield, text: "Private AI Twin", iconColor: "text-primary" },
               { icon: Network, text: "Cross-app intelligence", iconColor: "text-tertiary" },
-              { icon: Box, text: "Earn Drops", iconColor: "text-secondary" }
+              { icon: Box, text: "Proactive Recommendations", iconColor: "text-secondary" }
             ].map((chip, i) => (
               <motion.div 
                 key={i} 
@@ -123,7 +120,7 @@ export default function Hero() {
               className="flex items-center gap-2 text-xs font-medium text-on-surface-variant font-serif"
             >
               <ShieldCheck size={14} className="text-on-surface" />
-              Private by design. Built for control. Personal to you.
+              Private by design. Built for your control. Personal to only you.
             </motion.p>
           </div>
         </div>
@@ -197,7 +194,7 @@ export default function Hero() {
                   transition={{ delay: 0.7 }}
                   className="text-sm text-on-surface-variant font-serif leading-relaxed"
                 >
-                  I've curated 4 new experiences for you today based on your weekly rhythm.
+                  I've curated 4 new experiences for you based on this week's vibe.
                 </motion.p>
               </div>
 
@@ -211,7 +208,7 @@ export default function Hero() {
           {/* Card 1: Food */}
           <motion.div 
             style={{ y: card1ScrollY, x: useTransform(smoothMouseX, x => x * -0.5) }}
-            className="absolute top-12 -left-12 lg:-left-24 z-20 hidden md:block"
+            className="absolute top-12 -left-4 lg:-left-8 z-20 hidden md:block"
           >
             <motion.div 
               animate={{ y: [0, -10, 0], rotate: [0, 1, 0] }}
@@ -231,7 +228,7 @@ export default function Hero() {
           {/* Card 2: Events */}
           <motion.div 
             style={{ y: card2ScrollY, x: useTransform(smoothMouseX, x => x * 0.8) }}
-            className="absolute bottom-24 -left-8 lg:-left-16 z-20 hidden md:block"
+            className="absolute bottom-24 -left-4 lg:-left-8 z-20 hidden md:block"
           >
             <motion.div 
               animate={{ y: [0, -12, 0], rotate: [0, -1, 0] }}
@@ -251,7 +248,7 @@ export default function Hero() {
           {/* Card 3: Shopping */}
           <motion.div 
             style={{ y: card3ScrollY, x: useTransform(smoothMouseX, x => x * -1.2) }}
-            className="absolute top-32 -right-12 lg:-right-24 z-20 hidden lg:block"
+            className="absolute top-32 -right-4 lg:-right-8 z-20 hidden lg:block"
           >
             <motion.div 
               animate={{ y: [0, -10, 0], rotate: [0, 1, 0] }}
@@ -271,7 +268,7 @@ export default function Hero() {
           {/* Card 4: Travel */}
           <motion.div 
             style={{ y: card4ScrollY, x: useTransform(smoothMouseX, x => x * 0.5) }}
-            className="absolute bottom-32 -right-8 lg:-right-16 z-20 hidden md:block"
+            className="absolute bottom-32 -right-4 lg:-right-8 z-20 hidden md:block"
           >
             <motion.div 
               animate={{ y: [0, -12, 0], rotate: [0, -1, 0] }}
@@ -283,7 +280,7 @@ export default function Hero() {
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-primary font-label block mb-1">Travel</span>
                 <p className="text-sm font-bold font-headline text-on-surface mb-1">Weekend Stay</p>
-                <p className="text-[10px] text-on-surface-variant font-serif leading-snug">A secluded getaway 2 hours away. Your Twin found a direct flight.</p>
+                <p className="text-[10px] text-on-surface-variant font-serif leading-snug">A secluded getaway 2 hours away. I've found you the perfect Bed n Breakfast.</p>
               </div>
             </motion.div>
           </motion.div>
