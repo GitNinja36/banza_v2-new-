@@ -146,25 +146,23 @@ export default function ExperienceLayer() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/60 transition-opacity duration-500 group-hover:opacity-80"></div>
           </div>
 
-          <div className="relative z-10 flex flex-col h-full justify-between">
-            <div>
-              <div className="flex items-center gap-2 mb-4 drop-shadow-lg">
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start w-full gap-6">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
                 <ShoppingBag className="text-white group-hover:scale-110 transition-transform duration-300" size={24} />
                 <span className="font-headline font-bold text-lg text-white transition-colors duration-300">Shopping with better instinct</span>
               </div>
-              <p className="font-body text-white/80 text-sm leading-relaxed max-w-[240px] drop-shadow-md">We find objects that belong in your home, not just in your cart.</p>
+              <p className="font-body text-white/90 text-sm leading-relaxed max-w-[260px] drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">We find objects that belong in your home, not just in your cart.</p>
             </div>
 
-            <div className="w-full">
-              <div
-                className="bg-black/40 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl shadow-2xl max-w-[280px] mt-4 relative overflow-hidden opacity-90 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
-              >
-                {/* Shimmer effect on hover */}
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+            <div
+              className="bg-black/40 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl shadow-2xl w-full max-w-[280px] relative overflow-hidden opacity-90 translate-y-4 md:translate-y-0 md:translate-x-4 group-hover:opacity-100 group-hover:translate-y-0 md:group-hover:translate-x-0 transition-all duration-500"
+            >
+              {/* Shimmer effect on hover */}
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
 
-                <span className="text-[9px] text-white/90 font-bold uppercase tracking-widest block mb-1 font-label">Taste Discovery</span>
-                <p className="text-sm text-white/95 font-medium italic font-body leading-relaxed">"Matches your bookmarks on brutalist pottery."</p>
-              </div>
+              <span className="text-[9px] text-white/90 font-bold uppercase tracking-widest block mb-1 font-label">Taste Discovery</span>
+              <p className="text-sm text-white/95 font-medium italic font-body leading-relaxed">"Matches your bookmarks on brutalist pottery."</p>
             </div>
           </div>
         </motion.div>
@@ -185,17 +183,17 @@ export default function ExperienceLayer() {
               alt="Travel background"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/60 transition-opacity duration-500 group-hover:opacity-80"></div>
+            {/* Gradient overlay - Darkened for much better legibility */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/95 via-black/60 to-black/80 transition-opacity duration-500 group-hover:opacity-90"></div>
           </div>
 
-          <div className="flex items-center gap-2 mb-4 relative z-10 drop-shadow-lg">
+          <div className="flex items-center gap-2 mb-4 relative z-10 drop-shadow-[0_4px_4px_rgba(0,0,0,0.6)]">
             <Compass className="text-white group-hover:scale-110 transition-transform duration-300" size={24} />
             <span className="font-headline font-bold text-lg text-white transition-colors duration-300">Travel itineraries you’d actually follow</span>
           </div>
 
-          <div className="relative z-10 drop-shadow-md">
-            <p className="font-body text-white/80 text-sm leading-relaxed max-w-[240px]">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
+          <div className="relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <p className="font-body text-white/90 text-sm leading-relaxed max-w-[260px]">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
           </div>
 
           <div className="mt-auto space-y-4 relative z-10 w-full flex justify-end">
