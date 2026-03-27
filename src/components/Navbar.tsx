@@ -42,7 +42,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center space-x-15 font-label font-medium">
           <button onClick={() => scrollTo('how-it-works')} className="text-on-surface/70 hover:text-primary transition-colors duration-300">How It Works</button>
-          <button onClick={() => scrollTo('experience')} className="text-on-surface/70 hover:text-primary transition-colors duration-300">What it Does</button>
+          <button onClick={() => scrollTo('experience')} className="text-on-surface/70 hover:text-primary transition-colors duration-300">What It Does</button>
           <button onClick={() => scrollTo('why-banza')} className="text-on-surface/70 hover:text-primary transition-colors duration-300">What's Personal AI</button>
         </div>
 
@@ -73,7 +73,7 @@ export default function Navbar() {
           className="absolute top-full left-0 w-full bg-surface/95 backdrop-blur-xl shadow-lg border-t border-outline-variant/10 flex flex-col items-center py-8 space-y-6 md:hidden"
         >
           <button onClick={() => scrollTo('how-it-works')} className="text-on-surface font-medium text-lg">How It Works</button>
-          <button onClick={() => scrollTo('experience')} className="text-on-surface font-medium text-lg">What it Does</button>
+          <button onClick={() => scrollTo('experience')} className="text-on-surface font-medium text-lg">What It Does</button>
           <button onClick={() => scrollTo('why-banza')} className="text-on-surface font-medium text-lg">What's Personal AI</button>
           <button
             onClick={() => scrollTo('download')}

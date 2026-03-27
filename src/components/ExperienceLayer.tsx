@@ -1,20 +1,7 @@
-import { motion, useInView } from 'motion/react';
-import { useState, useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
 import { Utensils, Film, ShoppingBag, Compass, SlidersHorizontal, Sparkles, PlayCircle, History } from 'lucide-react';
 
 export default function ExperienceLayer() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const gridRef = useRef(null);
-  const isInView = useInView(gridRef, { once: true, amount: 0.1 });
-
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 4);
-    }, 2000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section id="experience" className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto bg-surface">
       <header className="mb-20 max-w-3xl">
@@ -46,214 +33,169 @@ export default function ExperienceLayer() {
         </motion.p>
       </header>
 
-      <div ref={gridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
         {/* Module 1: Food */}
         <motion.div
-          initial="hidden"
-          animate={isInView ? (activeIndex === 0 ? "hover" : "visible") : "hidden"}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
-            hover: { opacity: 1, y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
-          }}
-          className={`group relative ${activeIndex === 0 ? 'is-active' : ''} bg-surface-container-low p-8 rounded-3xl flex flex-col justify-between min-h-[480px] overflow-hidden cursor-pointer border border-transparent hover:border-primary/20 transition-colors duration-500`}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="group relative bg-surface-container-low p-8 rounded-3xl flex flex-col justify-between min-h-[480px] overflow-hidden cursor-pointer border border-transparent hover:border-primary/20 transition-colors duration-500"
         >
           {/* Subtle Glow Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-6">
-              <Utensils className="text-primary group-[.is-active]:scale-110 transition-transform duration-300" size={24} />
-              <span className="font-headline font-bold text-lg group-[.is-active]:text-primary transition-colors duration-300">Food that fits your mood</span>
+              <Utensils className="text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
+              <span className="font-headline font-bold text-lg group-hover:text-primary transition-colors duration-300">Food that fits your mood</span>
             </div>
 
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, x: -20, transition: { duration: 0.4, ease: "easeIn" } },
-                visible: { opacity: 0, x: -20, transition: { duration: 0.4, ease: "easeIn" } },
-                hover: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
-              }}
-              className="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow max-w-xs mt-4 relative overflow-hidden"
+            <div
+              className="bg-surface-container-lowest p-6 rounded-2xl editorial-shadow max-w-xs mt-4 relative overflow-hidden opacity-80 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
             >
               {/* Shimmer effect on hover */}
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-[.is-active]:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
 
               <div className="flex justify-between items-start mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-[.is-active]:bg-primary/20 transition-colors duration-300">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                   <SlidersHorizontal className="text-primary" size={20} />
                 </div>
-                <span className="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded-full uppercase tracking-wider text-on-surface-variant font-label group-[.is-active]:bg-primary group-[.is-active]:text-white transition-colors duration-300">From your Twin</span>
+                <span className="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded-full uppercase tracking-wider text-on-surface-variant font-label group-hover:bg-primary group-hover:text-white transition-colors duration-300">From your Twin</span>
               </div>
               <p className="font-body text-on-surface font-medium leading-snug mb-4">Craving something light? Try a paneer rice bowl nearby at Saffron Street.</p>
               <div className="flex gap-1">
-                <motion.div
-                  className="h-1 bg-primary rounded-full"
-                  variants={{
-                    hidden: { width: "2rem", transition: { duration: 0.4, ease: "easeIn" } },
-                    visible: { width: "2rem", transition: { duration: 0.4, ease: "easeIn" } },
-                    hover: { width: "4rem", transition: { duration: 0.4, ease: "easeOut" } }
-                  }}
-                ></motion.div>
+                <div className="h-1 bg-primary rounded-full w-8 group-hover:w-16 transition-all duration-500"></div>
                 <div className="h-1 w-4 bg-primary/20 rounded-full"></div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </motion.div>
 
         {/* Module 2: Entertainment */}
         <motion.div
-          initial="hidden"
-          animate={isInView ? (activeIndex === 1 ? "hover" : "visible") : "hidden"}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] } },
-            hover: { opacity: 1, y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
-          }}
-          className={`group relative ${activeIndex === 1 ? 'is-active' : ''} bg-surface-container p-8 rounded-3xl flex flex-col min-h-[480px] lg:mt-12 cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500`}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="group relative bg-surface-container p-8 rounded-3xl flex flex-col min-h-[480px] lg:mt-12 cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
         >
           {/* Subtle Glow Background */}
-          <div className="absolute inset-0 bg-gradient-to-tl from-primary/5 to-transparent opacity-0 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-tl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
           <div className="flex items-center gap-2 mb-6 relative z-10">
-            <Film className="text-primary group-[.is-active]:scale-110 transition-transform duration-300" size={24} />
-            <span className="font-headline font-bold text-lg group-[.is-active]:text-primary transition-colors duration-300">Entertainment you genuinely enjoy</span>
+            <Film className="text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
+            <span className="font-headline font-bold text-lg group-hover:text-primary transition-colors duration-300">Entertainment you genuinely enjoy</span>
           </div>
           <div className="mt-auto space-y-4 relative z-10">
-            <motion.div
-              variants={{
-                hidden: { opacity: 0, y: 20, transition: { duration: 0.4, ease: "easeIn" } },
-                visible: { opacity: 0, y: 20, transition: { duration: 0.4, ease: "easeIn" } },
-                hover: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
-              }}
-              className="bg-on-surface text-surface p-6 rounded-2xl relative overflow-hidden editorial-shadow"
+            <div
+              className="bg-on-surface text-surface p-6 rounded-2xl relative overflow-hidden editorial-shadow opacity-80 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
             >
               {/* Shimmer effect on hover */}
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-[.is-active]:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
 
               <div className="flex justify-between items-center mb-6">
-                <span className="text-xs font-label uppercase tracking-widest opacity-60 group-[.is-active]:opacity-100 transition-opacity duration-300">Tonight’s pick</span>
-                <Sparkles className="text-primary-container group-[.is-active]:text-primary transition-colors duration-300 group-[.is-active]:animate-pulse" size={20} />
+                <span className="text-xs font-label uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity duration-300">Tonight’s pick</span>
+                <Sparkles className="text-primary-container group-hover:text-primary transition-colors duration-300 group-hover:animate-pulse" size={20} />
               </div>
-              <h4 className="font-headline text-2xl font-bold mb-2 group-[.is-active]:text-primary-container transition-colors duration-300">The Silent Horizon</h4>
+              <h4 className="font-headline text-2xl font-bold mb-2 group-hover:text-primary-container transition-colors duration-300">The Silent Horizon</h4>
               <p className="text-sm opacity-80 font-light mb-6 font-body">A slow-burn thriller that matches your preference for architectural cinematography and Nordic noir pacing.</p>
               <div className="flex items-center gap-4 border-t border-surface/10 pt-4">
-                <span className="text-[10px] flex items-center gap-1 font-label group-[.is-active]:text-primary-container transition-colors duration-300"><PlayCircle size={14} /> Streaming on Mubi</span>
-                <span className="text-[10px] flex items-center gap-1 font-label group-[.is-active]:text-primary-container transition-colors duration-300"><History size={14} /> 98% Match</span>
+                <span className="text-[10px] flex items-center gap-1 font-label group-hover:text-primary-container transition-colors duration-300"><PlayCircle size={14} /> Streaming on Mubi</span>
+                <span className="text-[10px] flex items-center gap-1 font-label group-hover:text-primary-container transition-colors duration-300"><History size={14} /> 98% Match</span>
               </div>
-            </motion.div>
+            </div>
           </div>
         </motion.div>
 
         {/* Module 3: Shopping */}
         <motion.div
-          initial="hidden"
-          animate={isInView ? (activeIndex === 2 ? "hover" : "visible") : "hidden"}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
-            hover: { opacity: 1, y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
-          }}
-          className={`group relative ${activeIndex === 2 ? 'is-active' : ''} bg-surface-container-high p-8 rounded-3xl flex flex-col justify-between min-h-[480px] cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500`}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)" }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          className="group relative bg-surface-container-high p-8 rounded-3xl flex flex-col justify-between min-h-[480px] cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
         >
           {/* Subtle Glow Background */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-6">
-              <ShoppingBag className="text-primary group-[.is-active]:scale-110 transition-transform duration-300" size={24} />
-              <span className="font-headline font-bold text-lg group-[.is-active]:text-primary transition-colors duration-300">Shopping with better instinct</span>
+              <ShoppingBag className="text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
+              <span className="font-headline font-bold text-lg group-hover:text-primary transition-colors duration-300">Shopping with better instinct</span>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, scale: 0.9, rotate: -2, transition: { duration: 0.4, ease: "easeIn" } },
-                  visible: { opacity: 1, scale: 1, rotate: -2, transition: { duration: 0.6, ease: "easeOut" } },
-                  hover: { scale: 1.05, rotate: 0, transition: { duration: 0.5, ease: "easeOut" } }
-                }}
-                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg relative"
+              <div
+                className="aspect-[3/4] rounded-2xl overflow-hidden shadow-lg relative opacity-80 scale-95 -rotate-2 group-hover:opacity-100 group-hover:scale-105 group-hover:rotate-0 transition-all duration-500"
               >
                 {/* Image overlay glow */}
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-[.is-active]:opacity-100 mix-blend-overlay transition-opacity duration-500 z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 mix-blend-overlay transition-opacity duration-500 z-10 pointer-events-none"></div>
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDavtUvPdqSlyTpXrwEu23SJX9PzBGoyQpJe5Uhwie30ZXKJRSOusHrtamdqMcPQVasMP6WOa4fZozuqeefumvUHsT3hc_6ayH2WRd_dMCOtY_PbVxHrVNHRCWU16S-oYCRYcE6ySImqnm4eKz3C8Dqe03QOPhvIh1vU_OgqMJ_04d2hrwtnBTt1-Vh2IR3v81AM0zwrVWnzcT7cpiKzYTQPfiJwLaIi2NPCQE186YoOIqSyg8AnrY8Ifp_BOMNy3EadOcyllo3je4"
                   alt="Shopping"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
-              </motion.div>
+              </div>
               <div className="flex flex-col justify-end pb-4">
-                <motion.div
-                  variants={{
-                    hidden: { opacity: 0, x: 20, transition: { duration: 0.4, ease: "easeIn" } },
-                    visible: { opacity: 0, x: 20, transition: { duration: 0.4, ease: "easeIn" } },
-                    hover: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
-                  }}
-                  className="bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/15 relative overflow-hidden"
+                <div
+                  className="bg-surface-container-lowest p-4 rounded-2xl shadow-sm border border-outline-variant/15 relative overflow-hidden opacity-80 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
                 >
                   {/* Shimmer effect on hover */}
-                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/5 to-transparent group-[.is-active]:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+                  <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/5 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
 
                   <span className="text-[10px] text-primary font-bold uppercase block mb-1 font-label">Taste Discovery</span>
                   <p className="text-xs text-on-surface font-medium italic font-body">"Matches your bookmarks on brutalist pottery."</p>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>
           <div className="mt-8 relative z-10">
-            <p className="font-body text-on-surface-variant text-sm leading-relaxed max-w-[200px] group-[.is-active]:text-on-surface transition-colors duration-300">We find objects that belong in your home, not just in your cart.</p>
+            <p className="font-body text-on-surface-variant text-sm leading-relaxed max-w-[200px] group-hover:text-on-surface transition-colors duration-300">We find objects that belong in your home, not just in your cart.</p>
           </div>
         </motion.div>
 
         {/* Module 4: Travel */}
         <motion.div
-          initial="hidden"
-          animate={isInView ? (activeIndex === 3 ? "hover" : "visible") : "hidden"}
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] } },
-            hover: { opacity: 1, y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
-          }}
-          className={`group relative ${activeIndex === 3 ? 'is-active' : ''} bg-surface-container-lowest p-8 rounded-3xl flex flex-col justify-center min-h-[480px] editorial-shadow mt-8 lg:mt-8 border border-surface-container-high hover:border-primary/20 cursor-pointer overflow-hidden transition-colors duration-500`}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)" }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="group relative bg-surface-container-lowest p-8 rounded-3xl flex flex-col justify-center min-h-[480px] editorial-shadow mt-8 lg:mt-8 border border-surface-container-high hover:border-primary/20 cursor-pointer overflow-hidden transition-colors duration-500"
         >
           {/* Subtle Glow Background */}
-          <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 to-transparent opacity-0 group-[.is-active]:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
 
           <div className="absolute top-8 left-8 z-10">
             <div className="flex items-center gap-2">
-              <Compass className="text-primary group-[.is-active]:scale-110 transition-transform duration-300" size={24} />
-              <span className="font-headline font-bold text-lg group-[.is-active]:text-primary transition-colors duration-300">Travel itineraries you’d actually follow</span>
+              <Compass className="text-primary group-hover:scale-110 transition-transform duration-300" size={24} />
+              <span className="font-headline font-bold text-lg group-hover:text-primary transition-colors duration-300">Travel itineraries you’d actually follow</span>
             </div>
           </div>
           <div className="text-center px-4 space-y-6 mt-12 relative z-10">
             <div className="relative inline-block">
-              <motion.img
-                variants={{
-                  hidden: { scale: 0.9, opacity: 0, transition: { duration: 0.4, ease: "easeIn" } },
-                  visible: { scale: 1, opacity: 1, transition: { duration: 0.6, ease: "easeOut" } },
-                  hover: { scale: 1.05, transition: { duration: 0.5, ease: "easeOut" } }
-                }}
+              <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrDnspMhB3IF_vXruww_1IVTN9x4MjDFa-TCyTcrNqaZ7qv48I3WyVTo6ZXuvbPdxd0CIpRiGeQQvzmQereEuMg0PdgxqObCZ0cKa4_0TphqXHpCM6ndvSiULUR1CfSNDTcegPeDUm29dtRjxrS3AZwW-uwUCzhUM6ASLhxywn3vlYIzCeNRhNBW2bOG76PcYo5Uo99HSH3VvIbA8XNfx9fKilKgzI3go1xD_ge5NUh2kQbaZNDe-auqzI_n1VMySccis46QB9Crg"
                 alt="Travel"
-                className="w-64 h-64 rounded-full object-cover mx-auto ring-8 ring-surface-container-low group-[.is-active]:ring-primary/30 transition-shadow duration-700"
+                className="w-64 h-64 rounded-full object-cover mx-auto ring-8 ring-surface-container-low group-hover:ring-primary/30 transition-all duration-700 opacity-80 scale-95 group-hover:opacity-100 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 20, rotate: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeIn" } },
-                  visible: { opacity: 0, y: 20, rotate: 0, scale: 0.9, transition: { duration: 0.4, ease: "easeIn" } },
-                  hover: { opacity: 1, y: -8, rotate: -3, scale: 1.1, transition: { duration: 0.5, ease: "easeOut" } }
-                }}
-                className="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-2xl shadow-xl max-w-[140px] text-left overflow-hidden"
+              <div
+                className="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-2xl shadow-xl max-w-[140px] text-left overflow-hidden opacity-80 translate-y-4 scale-95 group-hover:opacity-100 group-hover:-translate-y-2 group-hover:-rotate-3 group-hover:scale-110 transition-all duration-500"
               >
                 {/* Shimmer effect on hover */}
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-[.is-active]:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
+                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
 
                 <span className="text-[10px] font-bold uppercase tracking-tighter block mb-1 font-label">Optimal Weekend</span>
                 <p className="text-xs font-bold leading-tight font-headline">Misty Pines Retreat</p>
                 <p className="text-[10px] opacity-80 mt-1 font-body">2.5h drive away</p>
-              </motion.div>
+              </div>
             </div>
-            <p className="text-on-surface-variant font-light text-lg font-body group-[.is-active]:text-on-surface transition-colors duration-300">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
+            <p className="text-on-surface-variant font-light text-lg font-body group-hover:text-on-surface transition-colors duration-300">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
           </div>
         </motion.div>
       </div>
