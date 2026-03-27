@@ -170,10 +170,10 @@ export default function MeetTwin() {
         </div>
       </div>
       {/* Bottom Section */}
-      <div className="relative w-screen left-1/2 right-1/2 -mx-[50vw] bg-[#F5F3ED] py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="bg-[#F5F3ED] py-16 px-8 md:py-24 md:px-16 rounded-[3rem] mt-12 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -182,7 +182,7 @@ export default function MeetTwin() {
             >
               Designed for depth, not just data.
             </motion.h3>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -192,25 +192,25 @@ export default function MeetTwin() {
               AI should understand intent, not just process requests. Our Memory Engine builds on every conversation, creating a companion that reflects your unique perspective.
             </motion.p>
           </div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col sm:flex-row gap-4 md:justify-end"
           >
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-[#EAE8E3] text-[#1A1A1A] rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-[#E0DCD5] transition-colors"
             >
               Learn More
             </motion.button>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-[#A04100] text-white rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-[#8A3800] transition-colors shadow-lg shadow-[#A04100]/20"
+              className="px-8 py-4 bg-[#f37021] text-white rounded-full font-label text-xs font-bold tracking-widest uppercase hover:bg-[#e65c00] transition-colors shadow-lg shadow-[#f37021]/20"
             >
               Build My Twin
             </motion.button>

@@ -44,7 +44,7 @@ export default function ExperienceLayer() {
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
-            hover: { y: -12, boxShadow: "0 30px 60px rgba(160,65,0,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
+            hover: { y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
           }}
           className="group relative bg-surface-container-low p-8 rounded-3xl flex flex-col justify-between min-h-[480px] overflow-hidden cursor-pointer border border-transparent hover:border-primary/20 transition-colors duration-500"
         >
@@ -108,7 +108,7 @@ export default function ExperienceLayer() {
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] } },
-            hover: { y: -12, boxShadow: "0 30px 60px rgba(160,65,0,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
+            hover: { y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
           }}
           className="group relative bg-surface-container p-8 rounded-3xl flex flex-col min-h-[480px] lg:mt-12 cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
         >
@@ -155,7 +155,7 @@ export default function ExperienceLayer() {
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
-            hover: { y: -12, boxShadow: "0 30px 60px rgba(160,65,0,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
+            hover: { y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
           }}
           className="group relative bg-surface-container-high p-8 rounded-3xl flex flex-col justify-between min-h-[480px] cursor-pointer border border-transparent hover:border-primary/20 overflow-hidden transition-colors duration-500"
         >
@@ -218,7 +218,7 @@ export default function ExperienceLayer() {
           variants={{
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] } },
-            hover: { y: -12, boxShadow: "0 30px 60px rgba(160,65,0,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
+            hover: { y: -12, boxShadow: "0 30px 60px rgba(243,112,33,0.12)", transition: { duration: 0.5, ease: "easeOut" } }
           }}
           className="group relative bg-surface-container-lowest p-8 rounded-3xl flex flex-col justify-center min-h-[480px] editorial-shadow mt-8 lg:mt-8 border border-surface-container-high hover:border-primary/20 cursor-pointer overflow-hidden transition-colors duration-500"
         >

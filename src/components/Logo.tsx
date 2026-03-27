@@ -19,12 +19,12 @@ export const AppIcon = ({ className = "" }: { className?: string }) => (
     <path d="M50 56C50 56 44 68 44 74C44 77.3137 46.6863 80 50 80C53.3137 80 56 77.3137 56 74C56 68 50 56 50 56Z" fill="#F9A826" />
     <defs>
       <linearGradient id="app_paint0" x1="50" y1="20" x2="50" y2="90" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#A04100" />
-        <stop offset="1" stopColor="#D35400" />
+        <stop stopColor="#f37021"/>
+        <stop offset="1" stopColor="#ff8c42"/>
       </linearGradient>
       <linearGradient id="app_paint1" x1="50" y1="32" x2="50" y2="86" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#D35400" />
-        <stop offset="1" stopColor="#F37021" />
+        <stop stopColor="#ff8c42"/>
+        <stop offset="1" stopColor="#F37021"/>
       </linearGradient>
       <linearGradient id="app_paint2" x1="50" y1="44" x2="50" y2="83" gradientUnits="userSpaceOnUse">
         <stop stopColor="#F37021" />

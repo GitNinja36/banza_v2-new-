@@ -61,7 +61,7 @@ export default function Trust() {
 
               {/* Orbiting Dots */}
               <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }} className="absolute inset-8">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#A04100] shadow-[0_0_10px_#A04100]"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#f37021] shadow-[0_0_10px_#f37021]"></div>
               </motion.div>
               <motion.div animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} className="absolute inset-16">
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#D3B8A3]"></div>
@@ -71,7 +71,7 @@ export default function Trust() {
               {/* Center Fingerprint */}
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="w-20 h-20 bg-gradient-to-br from-[#D35400] to-[#A04100] rounded-full flex items-center justify-center z-10 relative shadow-[0_0_40px_rgba(211,84,0,0.4)] overflow-hidden group cursor-pointer"
+                className="w-20 h-20 bg-gradient-to-br from-[#ff8c42] to-[#f37021] rounded-full flex items-center justify-center z-10 relative shadow-[0_0_40px_rgba(243,112,33,0.4)] overflow-hidden group cursor-pointer"
               >
                 {/* Scanning Line */}
                 <motion.div
@@ -102,13 +102,13 @@ export default function Trust() {
             className="bg-[#F5F3ED] p-8 rounded-[32px] flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <div className="h-32 bg-[#EAE8E3] rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-[#A04100]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
+              <div className="absolute inset-0 bg-[#f37021]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
               <motion.div
                 className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center relative z-10"
                 whileHover={{ rotateY: 180 }}
                 transition={{ duration: 0.6 }}
               >
-                <Lock className="text-[#A04100]" size={20} />
+                <Lock className="text-[#f37021]" size={20} />
               </motion.div>
             </div>
             <h3 className="font-headline font-bold text-xl mb-3 text-[#1A1A1A]">Private by design</h3>
@@ -125,10 +125,10 @@ export default function Trust() {
             className="bg-[#F5F3ED] p-8 rounded-[32px] flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <div className="h-32 bg-[#EAE8E3] rounded-2xl mb-8 flex flex-col items-center justify-center gap-2 px-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[#A04100]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
+              <div className="absolute inset-0 bg-[#f37021]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
               <motion.div className="w-full bg-white rounded-lg p-2 flex justify-between items-center shadow-sm relative z-10 group-hover:scale-105 transition-transform">
                 <span className="text-[8px] font-bold font-body flex items-center gap-1"><div className="w-3 h-3 bg-blue-100 rounded text-blue-600 flex items-center justify-center">@</div> Email Sync</span>
-                <motion.div animate={{ x: [0, -2, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="text-[#A04100] group-hover:text-green-600 transition-colors">
+                <motion.div animate={{ x: [0, -2, 0] }} transition={{ duration: 1.5, repeat: Infinity }} className="text-[#f37021] group-hover:text-green-600 transition-colors">
                   <ToggleRight size={16} />
                 </motion.div>
               </motion.div>
@@ -151,12 +151,12 @@ export default function Trust() {
             className="bg-[#F5F3ED] p-8 rounded-[32px] flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <div className="h-32 bg-[#EAE8E3] rounded-2xl mb-8 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-[#A04100]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
+              <div className="absolute inset-0 bg-[#f37021]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
               <div className="flex gap-1 relative z-10">
                 {[0.4, 0.6, 0.8, 1].map((opacity, i) => (
                   <motion.div
                     key={i}
-                    className="w-3 h-3 bg-[#D3B8A3] rounded-sm group-hover:bg-[#A04100] transition-colors duration-300"
+                    className="w-3 h-3 bg-[#D3B8A3] rounded-sm group-hover:bg-[#f37021] transition-colors duration-300"
                     style={{ opacity }}
                     animate={{ y: [0, -4, 0] }}
                     transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
@@ -178,14 +178,14 @@ export default function Trust() {
             className="bg-[#F5F3ED] p-8 rounded-[32px] flex flex-col group cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <div className="h-32 bg-[#EAE8E3] rounded-2xl mb-8 flex flex-col justify-center px-6 gap-2 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[#A04100]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
+              <div className="absolute inset-0 bg-[#f37021]/5 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full" />
               <div className="w-full h-1.5 bg-white rounded-full relative z-10 group-hover:w-[90%] transition-all duration-500"></div>
               <div className="w-3/4 h-1.5 bg-white rounded-full relative z-10 group-hover:w-[80%] transition-all duration-500 delay-75"></div>
-              <div className="w-1/2 h-1.5 bg-[#D3B8A3] rounded-full relative z-10 group-hover:bg-[#A04100] group-hover:w-[60%] transition-all duration-500 delay-150"></div>
+              <div className="w-1/2 h-1.5 bg-[#D3B8A3] rounded-full relative z-10 group-hover:bg-[#f37021] group-hover:w-[60%] transition-all duration-500 delay-150"></div>
               <div className="flex gap-2 mt-2 relative z-10">
                 {[0, 1, 2].map((i) => (
                   <motion.div key={i} animate={{ y: [0, -3, 0] }} transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}>
-                    <ShieldCheck size={10} className="text-[#A04100] group-hover:scale-125 transition-transform duration-300" />
+                    <ShieldCheck size={10} className="text-[#f37021] group-hover:scale-125 transition-transform duration-300" />
                   </motion.div>
                 ))}
               </div>

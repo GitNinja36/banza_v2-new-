@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #a04100;
-  --color-primary-container: #ff6b00;
+  --color-primary: #f37021;
+  --color-primary-container: #ff8c42;
   --color-surface: #fcf9f4;
   --color-surface-container-lowest: #ffffff;
   --color-surface-container-low: #f6f3ee;
@@ -14,7 +14,7 @@
   --color-outline-variant: #e2bfb0;
   --color-tertiary: #0062a1;
   --color-tertiary-container: #059eff;
-  --color-secondary: #96481e;
+  --color-secondary: #e65c00;
   --color-secondary-container: #fe9a69;
 
   --font-headline: "Plus Jakarta Sans", sans-serif;
@@ -41,7 +41,7 @@
 @layer utilities {
   .editorial-gradient {
     background: radial-gradient(circle at 70% 30%, rgba(255, 107, 0, 0.08) 0%, rgba(252, 249, 244, 0) 60%),
-                radial-gradient(circle at 10% 80%, rgba(160, 65, 0, 0.05) 0%, rgba(252, 249, 244, 0) 50%);
+                radial-gradient(circle at 10% 80%, rgba(243, 112, 33, 0.05) 0%, rgba(252, 249, 244, 0) 50%);
   }
   .glass-panel {
     background: rgba(255, 255, 255, 0.8);
@@ -51,7 +51,7 @@
     box-shadow: 0 12px 40px rgba(28, 28, 25, 0.06);
   }
   .text-gradient-primary {
-    background: linear-gradient(135deg, #a04100 0%, #ff6b00 100%);
+    background: linear-gradient(135deg, #f37021 0%, #ff8c42 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
