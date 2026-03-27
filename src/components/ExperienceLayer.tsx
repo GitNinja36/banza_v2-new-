@@ -46,7 +46,7 @@ export default function ExperienceLayer() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
-              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774585979/tofu_paneer_bowl_45_angle_720_rno2qv.jpg"
+              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774590932/cream_coloured_paneer_bowl_720_onbc87.jpg"
               alt="Food background"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -79,7 +79,9 @@ export default function ExperienceLayer() {
               </div>
             </div>
           </div>
-        </motion.div>        {/* Module 2: Entertainment */}
+        </motion.div>
+
+        {/* Module 2: Entertainment */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +93,7 @@ export default function ExperienceLayer() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img
-              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774585962/movie_recommendation_poster_720_fad1dc.jpg"
+              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774590925/silent_horizon_light_mode_720_w0lmaq.jpg"
               alt="Entertainment background"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
@@ -135,9 +137,9 @@ export default function ExperienceLayer() {
         >
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden">
-            <img 
-              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774587732/pots_in_grey_bg_720_u9ksvx.jpg" 
-              alt="Shopping background" 
+            <img
+              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774590907/pots_against_light_bg_720_fvswwo.jpg"
+              alt="Shopping background"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             {/* Gradient overlay */}
@@ -178,9 +180,9 @@ export default function ExperienceLayer() {
         >
           {/* Background Image */}
           <div className="absolute inset-0 z-0 overflow-hidden">
-            <img 
-              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774587896/cabin_in_the_woods_720_mihnqd.jpg" 
-              alt="Travel background" 
+            <img
+              src="https://res.cloudinary.com/davtv5r1c/image/upload/v1774590917/unreal_cabin_720_hwhblx.jpg"
+              alt="Travel background"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             {/* Gradient overlay */}
@@ -191,7 +193,7 @@ export default function ExperienceLayer() {
             <Compass className="text-white group-hover:scale-110 transition-transform duration-300" size={24} />
             <span className="font-headline font-bold text-lg text-white transition-colors duration-300">Travel itineraries you’d actually follow</span>
           </div>
-          
+
           <div className="relative z-10 drop-shadow-md">
             <p className="font-body text-white/80 text-sm leading-relaxed max-w-[240px]">Your Twin knows when you need to disconnect. No itinerary needed, just a location that feels like you.</p>
           </div>
@@ -209,8 +211,8 @@ export default function ExperienceLayer() {
               </div>
               <p className="text-lg font-bold leading-tight font-headline text-white mb-3">Misty Pines Retreat</p>
               <div className="flex items-center gap-2 border-t border-white/10 pt-3">
-                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(243,112,33,0.8)]"></div>
-                 <p className="text-[11px] text-white/90 font-medium font-body">2.5h drive away</p>
+                <div className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(243,112,33,0.8)]"></div>
+                <p className="text-[11px] text-white/90 font-medium font-body">2.5h drive away</p>
               </div>
             </div>
           </div>
