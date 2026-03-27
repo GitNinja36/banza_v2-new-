@@ -146,8 +146,8 @@ export default function ExperienceLayer() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/60 transition-opacity duration-500 group-hover:opacity-80"></div>
           </div>
 
-          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start w-full gap-6">
-            <div className="flex-1">
+          <div className="relative z-10 flex flex-col h-full justify-start items-start gap-8">
+            <div className="w-full">
               <div className="flex items-center gap-2 mb-4 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
                 <ShoppingBag className="text-white group-hover:scale-110 transition-transform duration-300" size={24} />
                 <span className="font-headline font-bold text-lg text-white transition-colors duration-300">Shopping with better instinct</span>
@@ -156,7 +156,7 @@ export default function ExperienceLayer() {
             </div>
 
             <div
-              className="bg-black/40 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl shadow-2xl w-full max-w-[280px] relative overflow-hidden opacity-90 translate-y-4 md:translate-y-0 md:translate-x-4 group-hover:opacity-100 group-hover:translate-y-0 md:group-hover:translate-x-0 transition-all duration-500"
+              className="bg-black/40 backdrop-blur-2xl border border-white/20 p-5 rounded-3xl shadow-2xl w-full max-w-[280px] relative overflow-hidden opacity-90 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500"
             >
               {/* Shimmer effect on hover */}
               <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-[shimmer_1.5s_infinite] pointer-events-none"></div>
