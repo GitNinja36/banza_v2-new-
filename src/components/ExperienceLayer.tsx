@@ -119,7 +119,7 @@ export default function ExperienceLayer() {
               <h4 className="font-headline text-2xl font-bold text-white mb-2">The Silent Horizon</h4>
               <p className="text-xs text-white/70 font-light mb-6 font-body leading-relaxed">A slow-burn thriller that matches your preference for architectural cinematography and Nordic noir pacing.</p>
               <div className="flex items-center gap-4 border-t border-white/10 pt-4">
-                <span className="text-[10px] flex items-center gap-1.5 font-label text-white/90"><PlayCircle size={14} className="text-primary" /> Streaming on Mubi</span>
+                <span className="text-[10px] flex items-center gap-1.5 font-label text-white/90"><PlayCircle size={14} className="text-primary" /> Streaming on Prime</span>
                 <span className="text-[10px] flex items-center gap-1.5 font-label text-white/90"><History size={14} className="text-primary" /> 98% Match</span>
               </div>
             </div>
